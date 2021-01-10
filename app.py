@@ -59,7 +59,7 @@ if mode == 'Learn':
     context = sections[header_section]
     question = st.text_input('Enter your question here:')
     
-    @st.cache(allow_output_mutation=True)
+    @st.cache(allow_output_mutation=True, show_spinner=False)
     def get_out(passage, question):
         return predictor.predict(passage=passage, question=question)
     
