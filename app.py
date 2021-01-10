@@ -74,7 +74,7 @@ if mode == 'Learn':
         ret = '.'.join(sentences[max(0,sentence_num-1):sentence_num+2]).replace('BDE MFs', '**' + out['best_span_str'] + '**')
         st.success(ret)
 
-        st.info("If our bot couldn't answer your question properly, please contaxt ABC @ XYZ if it is an urgent question or DEF @ GHI for non time-sensitive questions.")
+        st.info("If our bot couldn't answer your question properly, please email [the UA COVID-19 Team](mailto:ua-covid19@mit.edu) with any additional questions you might have.")
 
     st.markdown('## Reporting')
     with st.beta_expander('MIT Student Reporting Hotline'):
@@ -121,6 +121,7 @@ if mode == 'Learn':
         with st.beta_expander(header_section):
             st.markdown(content)
 else:
+    'We encourage students to design custom Kahoot and skribbl.io games based on the MIT COVID policies. We might hold competitions with prizes for those who created the games and those who won the competition! You can enter the codes for some of these games below to play them right in our web app."
     with st.beta_expander('Kahoot Quiz', expanded=True):
         components.iframe('https://kahoot.it/', height=500)
     with st.beta_expander('Skribbl.io Game', expanded=True):
