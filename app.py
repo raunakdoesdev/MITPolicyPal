@@ -121,7 +121,7 @@ if mode == 'Learn':
         with st.beta_expander(header_section):
             st.markdown(content)
 else:
-    'We encourage students to design custom Kahoot and skribbl.io games based on the MIT COVID policies. We might hold competitions with prizes for those who created the games and those who won the competition! You can enter the codes for some of these games below to play them right in our web app."
+    "We encourage students to design custom Kahoot and skribbl.io games based on the MIT COVID policies. We might hold competitions with prizes for those who created the games and those who won the competition! You can enter the codes for some of these games below to play them right in our web app."
     with st.beta_expander('Kahoot Quiz', expanded=True):
         components.iframe('https://kahoot.it/', height=500)
     with st.beta_expander('Skribbl.io Game', expanded=True):
