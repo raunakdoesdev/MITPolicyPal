@@ -64,7 +64,7 @@ if mode == 'Learn':
         return predictor.predict(passage=passage, question=question)
     
     if st.button('Press Here to Ask!'):
-        out = get_out(passage, question)
+        out = get_out(context, question)
 
         sentences = context.replace(out['best_span_str'], 'BDE MFs').split('.')
         sentence_num = -1
