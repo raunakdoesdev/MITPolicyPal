@@ -58,11 +58,13 @@ if mode == 'Learn':
     header_section = st.selectbox('Select which policy section you have a question about',tuple(sections.keys()))  # user will select which section
     context = sections[header_section]
     question = st.text_input('Enter your question here:')
+    
+    @st.cache(allow_output_mutation=True)
+    def get_out(passage, question):
+        return predictor.predict(passage=passage, question=question)
+    
     if st.button('Press Here to Ask!'):
-        out = predictor.predict(
-            passage=context,
-            question=question
-        )
+        out = get_out(passage, question)
 
         sentences = context.replace(out['best_span_str'], 'BDE MFs').split('.')
         sentence_num = -1
